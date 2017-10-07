@@ -2,26 +2,30 @@
 title: Vikebot Docs
 
 language_tabs: # must be one of https://git.io/vQNgJ
-- go: Go
+- go: GO
 - csharp: C#
+- java: Java
 
 toc_footers:
 - <a href='#'>Sign Up to play a game</a>
-
-search: true
 ---
 # Choose your language
 
 ## Official SDKs
 
-The vikebot team maintains a handful **official** SDKs. You can see a list of all of them including links to their repositories below.
+The vikebot team maintains a handful official SDKs. You can see a list of all of them including links to their repositories below.
 
 Language | Logo | Version | Maintainer | Repository
 -------- | ---- | ------- | ---------- | ----------
-GO | <img alt="golang logo" src="images/go_logo.png" width="50px"> | _Development_ | [@harwoeck](https://github.com/harwoeck) | <https://github.com/harwoeck/vikebot-go>
-C# | <img alt="csharp logo" src="images/csharp_logo.png" width="50px"> | _Unreleased_ | [@harwoeck](https://github.com/harwoeck) | <https://github.com/harwoeck/vikebot-csharp>
+GO | <img alt="golang logo" src="images/lang/go.png" width="50px"> | _Development_ | [@harwoeck](https://github.com/harwoeck) | [github.com/harwoeck/vikebot-go](https://github.com/harwoeck/vikebot-go)
+C# | <img alt="csharp logo" src="images/lang/csharp.png" width="50px"> | _Unreleased_ | [@harwoeck](https://github.com/harwoeck) | [github.com/harwoeck/vikebot-csharp](https://github.com/harwoeck/vikebot-csharp)
 
 ## Community maintained SDKs
+
+Language | Logo | Version | Maintainer | Repository
+-------- | ---- | ------- | ---------- | ----------
+Java | <img alt="java logo" src="images/lang/java.png" width="50px"> | _Unreleased_ | [@phillip-r99](https://github.com/phillip-r99) | [github.com/vikebot/vikebot-java](https://github.com/vikebot/vikebot-java)
+
 
 <aside class="notice">
   <strong>You have developed a SDK?</strong> We'ld love to link it and add documention for it to this site. Just write us at <a href="mailto:hi@vikebot.com">hi@vikebot.com</a>
@@ -44,7 +48,7 @@ Because of extrem differences in the SDK installation process please visit the r
 import "github.com/harwoeck/vikebot-go"
 
 func main() {
-    game, _ := vikebot.MustJoin("YOUR-AUTHTOKEN")
+    game := vikebot.MustJoin("YOUR-AUTHTOKEN")
 }
 ```
 
@@ -68,7 +72,31 @@ namespace MyBot
 
 Before your bot can execute any commands you need to connect to the server. This is mostly done be the SDKs. The only thing left for you is to copy your `authtoken` from your [dashboard](https://app.vikebot.com) into your code.
 
-# Instruct your BOT
+## See the results
+
+If you want to see a graphical representation of the game's current state (e.g. your player moving while you execute your bot code) open <https://watch.vikebot.com/YOUR-WATCHTOKEN> in your browser where the `watchtoken` can again be copied from your dashboard.
+
+The mentioned website uses our open websocket protocol to receive special preprossed data that can be easily rendered. All people who want to do their own graphical rendering can also use this protocol and informations provided in the reference implementation.
+
+# About your Bot
+
+![bot](images/soldier.png)
+
+## Health
+
+Each player start's with a default of `100` health-points (`HP`). Every time someone hits you the damage will be subtracted of your current `HP`.
+
+## Location
+
+At the start of the game each character will get randomly placed in the map. The map itself has a fixed per game size that doesn't change. There is no way to tell the absolute position of your player. You can't run out of this borders.
+
+To check whether you are close to the edge inspect the `MapEntity` returned from `Environment` action for `BlockType.EndOfMap`s.
+
+## Orientation
+
+
+
+# Instruct your Bot
 
 ## Move
 
@@ -142,6 +170,12 @@ catch (InvalidGameActionException exc)
 }
 ```
 
+This command can be used to determine the amount of people within the player's action area. The value is returned as `int`. The zone is a 11x11 matrix with the player in it's center.
+
+The example below would return `4`.
+
+<img alt="radar visualization" src="images/radar.png" width="400px">
+
 ## Watch
 
 ```go
@@ -165,6 +199,8 @@ catch (InvalidGameActionException exc)
 }
 ```
 
+<img alt="watch visualization" src="images/watch.png" width="400px">
+
 ## Environment
 
 ```go
@@ -180,6 +216,8 @@ if err != nil {
 
 ```
 
+<img alt="environment visualization" src="images/environment.png" width="400px">
+
 ## Scout
 
 ```go
@@ -191,6 +229,8 @@ if err != nil {
 
 ```
 
+<img alt="scout visualization" src="images/scout.png" width="400px">
+
 ## Defend and Undefend
 
 ```go
@@ -201,6 +241,85 @@ if err != nil {
 ```csharp
 
 ```
+
+# Types
+
+## Direction
+
+```go
+north := vikebot.DirectionNorth
+east := vikebot.DirectionEast
+south := vikebot.DirectionSouth
+west := vikebot.DirectionWest
+```
+
+```csharp
+Direction north = Direction.North;
+Direction east = Direction.East;
+Direction south = Direction.South;
+Direction west = Direction.West;
+```
+
+Direction specifies one of the four cardinal-directions. Used in some different actions like `Move` or `Attack`.
+
+Value | Description
+----- | -----------
+`North` | Specifies the cardinal-direction "north"
+`East` | Specifies the cardinal-direction "east"
+`South` | Specifies the cardinal-direction "south"
+`West` | Specifies the cardinal-direction "west"
+
+## BlockType
+
+> Usage: You can use this to equality-check a block's `Type` value.
+
+```go
+swamp := vikebot.BlockSwamp
+stonetile := vikebot.BlockStonetile
+dirt := vikebot.BlockDirt
+grass := vikebot.BlockGrass
+lava := vikebot.BlockLava
+lavarock := vikebot.BlockLavarock
+water := vikebot.BlockWater
+endofmap := vikebot.BlockEndOfMap
+fog := vikebot.BlockFog
+```
+
+```csharp
+BlockType swamp = BlockType.Swamp;
+BlockType stonetile = BlockType.Stonetile;
+BlockType dirt = BlockType.Dirt;
+BlockType grass = BlockType.Grass;
+BlockType lava = BlockType.Lava;
+BlockType lavarock = BlockType.Lavarock;
+BlockType water = BlockType.Water;
+BlockType endofmap = BlockType.EndOfMap;
+BlockType fog = BlockType.Fog;
+```
+
+```java
+BlockType swamp = BlockType.SWAMP;
+BlockType stonetile = BlockType.STONETILE;
+BlockType dirt = BlockType.DIRT;
+BlockType grass = BlockType.GRASS;
+BlockType lava = BlockType.LAVA;
+BlockType lavarock = BlockType.LAVAROCK;
+BlockType water = BlockType.WATER;
+BlockType endofmap = BlockType.ENDOFMAP;
+BlockType fog = BlockType.FOG;
+```
+
+Identification | Image | Description
+-------------- | ----- | -----------
+`Swamp` | <img alt="swamp block" src="images/blocks/swamp.jpg" width="50px"> |
+`Stonetile` | <img alt="stonetile block" src="images/blocks/stonetile.jpg" width="50px"> |
+`Dirt` | <img alt="dirt block" src="images/blocks/dirt.png" width="50px"> |
+`Grass` | <img alt="grass block" src="images/blocks/grass.jpg" width="50px"> |
+`Lava` | <img alt="lava block" src="images/blocks/lava.png" width="50px"> |
+`Lavarock` | <img alt="lavarock block" src="images/blocks/lavarock.jpg" width="50px"> |
+`Water` | <img alt="water block" src="images/blocks/water.png" width="50px"> | Water can sometimes occour in form of a little lake. Don't run into this fields or you will encounter a damage at `-20hp` per second.
+`EndOfMap` | <img alt="end-of-map block" src="images/blocks/endofmap.jpg" width="50px"> |
+`Fog` | <img alt="fog block" src="images/blocks/fog.png" width="50px"> |
 
 # Examples
 
