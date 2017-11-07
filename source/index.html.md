@@ -204,16 +204,12 @@ catch (InvalidGameActionException exc)
 ## Environment
 
 ```go
-var myArea vikebot.EnvironmentEntity
-myArea, err = game.Player.Environment()
-if err != nil {
-    //
-}
-//
+var area vikebot.EnvironmentEntity
+area, _ = game.Player.Environment()
 ```
 
 ```csharp
-
+EnvironmentEntity ee = game.Player.Environment();
 ```
 
 <img alt="environment visualization" src="images/environment.png" width="400px">
@@ -221,13 +217,15 @@ if err != nil {
 ## Scout
 
 ```go
-
-
+var counter int
+counter, _ = game.Player.Scout(5)
 ```
 
 ```csharp
-
+int count = game.Player.Scout(5);
 ```
+
+Scout counts up the amount of people in the direction you are currently watching. You can specify how far the player "watches" with the argument to the function call.
 
 <img alt="scout visualization" src="images/scout.png" width="400px">
 
