@@ -96,13 +96,13 @@ To check whether you are close to the edge inspect the `MapEntity` returned from
 
 ## Rotate
 
-The player is able to watch in 4 different directions:
-`dirNorth` , `dirEast` , `dirSouth` and `dirWest` where north is at the top of the map. If the function is called with the string parameter `right` the player is rotating to the right and with `left` the player is rotating to the left. Default watching direction of the player is `dirNorth`
-
 ```go
 game.Player.Rotate("right")
 // Your bot successfully rotated into the right direction (dirEast if default value is dirNorth)
 ```
+
+The player is able to watch in 4 different directions:
+`dirNorth` , `dirEast` , `dirSouth` and `dirWest` where north is at the top of the map. If the function is called with the string parameter `right` the player is rotating to the right and with `left` the player is rotating to the left. Default watching direction of the player is `dirNorth`
 
 ## Move
 
@@ -131,7 +131,7 @@ catch (InvalidGameActionException exc)
 ## Attack
 
 ```go
-err := game.Player.Attack(vikebot.DirectionNorth)
+enemyHealth, err := game.Player.Attack()
 if err != nil {
     // Something "bad" happend. Maybe you
     //   - violated the attack restrictions?
@@ -153,6 +153,8 @@ catch (InvalidGameActionException exc)
     //   - attacked an empty field? (Hint: Check with the `Watch` instruction)
 }
 ```
+
+This command can be used to attack an enemy in front of the player. The `enemyhealth` is returned as `int`. If the player kills the enemy, the counter for `kills` will be increased and the enemy's counter for `deaths` will also be increased.
 
 ## Radar
 
@@ -178,7 +180,7 @@ catch (InvalidGameActionException exc)
 }
 ```
 
-This command can be used to determine the amount of people within the player's action area. The value is returned as `int`. The zone is a 11x11 matrix with the player in it's center.
+This command can be used to determine the amount of people within the player's action area. The value is returned as `int`. The zone is a `11x11 matrix` with the player in its center.
 
 The example below would return `4`.
 
