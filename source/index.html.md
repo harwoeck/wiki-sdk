@@ -100,6 +100,8 @@ To check whether you are close to the edge inspect the `MapEntity` returned from
 
 ## Move
 
+Move
+
 ```go
 err := game.Player.Move(vikebot.DirectionNorth)
 if err != nil {
