@@ -7,7 +7,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
 - java: Java
 
 toc_footers:
-- <a href='#'>Sign Up to play a game</a>
+- <a href="https://vikebot.com" target="_blank">Sign Up to play a game</a>
 ---
 # Choose your language
 
@@ -22,21 +22,17 @@ C# | <img alt="csharp logo" src="images/lang/csharp.png" width="50px"> | _Unrele
 
 ## Community maintained SDKs
 
+We heavily rely on our community to contribute to this project. If you would like to help you can implement SDKs in new languages. We'ld then love to link it and add documentation here. We think a single place where we collect all the infromation needed suits well, espacially for beginners. If you have any questions you call always contact us on any support channel.
+
 Language | Logo | Version | Maintainer | Repository
 -------- | ---- | ------- | ---------- | ----------
 Java | <img alt="java logo" src="images/lang/java.png" width="50px"> | _Unreleased_ | [@phillip-r99](https://github.com/phillip-r99) | [github.com/vikebot/vikebot-java](https://github.com/vikebot/vikebot-java)
-
-
-<aside class="notice">
-  <strong>You have developed a SDK?</strong> We'ld love to link it and add documention for it to this site. Just write us at <a href="mailto:hi@vikebot.com">hi@vikebot.com</a>
-</aside>
-
 
 # Install
 
 You have choosen a SDK and now want to install it. Perfect! Just read below.
 
-Because of extrem differences in the SDK installation process please visit the repository of your language to get specific instructions. After a successful installation come back to this site.
+Because of extrem differences in the SDK installation process please visit the repository of your sdk to get specific instructions. In general installation guidelines should be one of the first things in the project's README. After a successful installation come back to this site.
 
 # Start playing
 
