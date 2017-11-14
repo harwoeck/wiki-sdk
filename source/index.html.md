@@ -97,36 +97,24 @@ To check whether you are close to the edge inspect the `MapEntity` returned from
 ## Rotate
 
 ```go
-game.Player.Rotate("right")
+game.Player.Rotate(vikebot.angleRight)
 // Your bot successfully rotated into the right direction (dirEast if default value is dirNorth)
 ```
 
 The player is able to watch in 4 different directions:
-`dirNorth` , `dirEast` , `dirSouth` and `dirWest` where north is at the top of the map. If the function is called with the string parameter `right` the player is rotating to the right and with `left` the player is rotating to the left. Default watching direction of the player is `dirNorth`
+`vikebot.DirectionNorth` , `vikebot.DirectionEast` , `vikebot.DirectionSouth` and `vikebot.DirectionWest` where north is at the top of the map. If the function is called with the string parameter `vikebot.angleRight` the player is rotating to the right and with `vikebot.angleLeft` the player is rotating to the left. Default watching direction of the player is `vikebot.DirectionNorth`
 
 ## Move
 
-This command can be used to move the player in the watching direction. The player will always be moved by 1 in the map area if it is possible.
-
 ```go
-err := game.Player.Move(vikebot.DirectionNorth)
+err := game.Player.Move()
 if err != nil {
     // Something "bad" happend. Maybe you violated the move restrictions?
 }
 // Your bot successfully moved into into cardinal-direction NORTH
 ```
 
-```csharp
-try
-{
-    game.Move(Direction.North);
-    // Your bot successfully moved into into cardinal-direction NORTH
-}
-catch (InvalidGameActionException exc)
-{
-    // Something "bad" happend. Maybe you violated the move restrictions?
-}
-```
+This command can be used to move the player in the watching direction. The player will always be `moved by 1` in the map area if it is possible.
 
 ## Attack
 
@@ -154,7 +142,7 @@ catch (InvalidGameActionException exc)
 }
 ```
 
-This command can be used to attack an enemy in front of the player. The `enemyhealth` is returned as `int`. If the player kills the enemy, the counter for `kills` will be increased and the enemy's counter for `deaths` will also be increased.
+This command can be used to attack an enemy in front of the player. The `Enemyhealth` is returned as `int`. If the player kills the enemy, the counter for `Kills` will be increased and the enemy's counter for `Deaths` will also be increased.
 
 ## Radar
 
@@ -180,7 +168,7 @@ catch (InvalidGameActionException exc)
 }
 ```
 
-This command can be used to determine the amount of people within the player's action area. The value is returned as `int`. The zone is a `11x11 matrix` with the player in its center.
+This command can be used to determine the amount of people within the player's action area. The value is returned as `int`. The zone is a `11x11` matrix with the player in its center.
 
 The example below would return `4`.
 
@@ -209,6 +197,10 @@ catch (InvalidGameActionException exc)
 }
 ```
 
+This command can be used to determine the `PlayerHealth` within the player's watching area. The value is returned as a `int`. The zone is a `5x11` matrix in case of the player is watching in `vikebot.DirectionNorth`.
+
+For Example if the direction where the player is watching is `vikebot.DirectionEast` the matrix is of the size `11x5` where `11` is the height `y`.
+
 <img alt="watch visualization" src="images/watch.png" width="400px">
 
 ## Environment
@@ -221,6 +213,8 @@ area, _ = game.Player.Environment()
 ```csharp
 EnvironmentEntity ee = game.Player.Environment();
 ```
+
+This command can be used to determine the `vikebot.BlockType` within the player's action area. The value is returned as a `string`. The zone is a `11x11` matrix with the player in its center.
 
 <img alt="environment visualization" src="images/environment.png" width="400px">
 
