@@ -97,7 +97,7 @@ To check whether you are close to the edge inspect the `MapEntity` returned from
 ## Rotate
 
 The player is able to watch in 4 different directions:
-`dirNorth`,`dirEast`,`dirSouth` and `dirWest` where north is at the top of the map. If the function is called with the string parameter `right` the player is rotating to the right and with `left` the player is rotating to the left. Default watching direction of the player is `dirNorth`
+`dirNorth` , `dirEast` , `dirSouth` and `dirWest` where north is at the top of the map. If the function is called with the string parameter `right` the player is rotating to the right and with `left` the player is rotating to the left. Default watching direction of the player is `dirNorth`
 
 ```go
 game.Player.Rotate("right")
