@@ -263,6 +263,9 @@
             <a href="#instruct-your-bot" class="toc-h1 toc-link" data-title="Instruct your Bot">Instruct your Bot</a>
               <ul class="toc-list-h2">
                   <li>
+                    <a href="#rotate" class="toc-h2 toc-link" data-title="Instruct your Bot">Rotate</a>
+                  </li>
+                  <li>
                     <a href="#move" class="toc-h2 toc-link" data-title="Instruct your Bot">Move</a>
                   </li>
                   <li>
@@ -306,7 +309,7 @@
           </li>
       </div>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up to play a game</a></li>
+            <li><a href="https://vikebot.com" target="_blank">Sign Up to play a game</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
@@ -340,6 +343,8 @@
 </tr>
 </tbody></table>
 <h2 id='community-maintained-sdks'>Community maintained SDKs</h2>
+<p>We heavily rely on our community to contribute to this project. If you would like to help you can implement SDKs in new languages. We&#39;ld then love to link it and add documentation here. We think a single place where we collect all the infromation needed suits well, espacially for beginners. If you have any questions you call always contact us on any support channel.</p>
+
 <table><thead>
 <tr>
 <th>Language</th>
@@ -357,14 +362,10 @@
 <td><a href="https://github.com/vikebot/vikebot-java">github.com/vikebot/vikebot-java</a></td>
 </tr>
 </tbody></table>
-
-<aside class="notice">
-  <strong>You have developed a SDK?</strong> We'ld love to link it and add documention for it to this site. Just write us at <a href="mailto:hi@vikebot.com">hi@vikebot.com</a>
-</aside>
 <h1 id='install'>Install</h1>
 <p>You have choosen a SDK and now want to install it. Perfect! Just read below.</p>
 
-<p>Because of extrem differences in the SDK installation process please visit the repository of your language to get specific instructions. After a successful installation come back to this site.</p>
+<p>Because of extrem differences in the SDK installation process please visit the repository of your sdk to get specific instructions. In general installation guidelines should be one of the first things in the project&#39;s README. After a successful installation come back to this site.</p>
 <h1 id='start-playing'>Start playing</h1><h2 id='register-for-a-game'>Register for a game</h2><h2 id='connect-to-the-server'>Connect to the server</h2><pre class="highlight go tab-go"><code><span class="k">import</span><span class="x"> </span><span class="s">"github.com/harwoeck/vikebot-go"</span><span class="x">
 
 </span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
@@ -399,7 +400,14 @@
 <p>At the start of the game each character will get randomly placed in the map. The map itself has a fixed per game size that doesn&#39;t change. There is no way to tell the absolute position of your player. You can&#39;t run out of this borders.</p>
 
 <p>To check whether you are close to the edge inspect the <code>MapEntity</code> returned from <code>Environment</code> action for <code>BlockType.EndOfMap</code>s.</p>
-<h2 id='orientation'>Orientation</h2><h1 id='instruct-your-bot'>Instruct your Bot</h1><h2 id='move'>Move</h2><pre class="highlight go tab-go"><code><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Move</span><span class="p">(</span><span class="n">vikebot</span><span class="o">.</span><span class="n">DirectionNorth</span><span class="p">)</span><span class="x">
+<h2 id='orientation'>Orientation</h2><h1 id='instruct-your-bot'>Instruct your Bot</h1><h2 id='rotate'>Rotate</h2><pre class="highlight go tab-go"><code><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Rotate</span><span class="p">(</span><span class="s">"right"</span><span class="p">)</span><span class="x">
+</span><span class="c">// Your bot successfully rotated into the right direction (dirEast if default value is dirNorth)</span><span class="x">
+</span></code></pre>
+<p>The player is able to watch in 4 different directions:
+<code>dirNorth</code> , <code>dirEast</code> , <code>dirSouth</code> and <code>dirWest</code> where north is at the top of the map. If the function is called with the string parameter <code>right</code> the player is rotating to the right and with <code>left</code> the player is rotating to the left. Default watching direction of the player is <code>dirNorth</code></p>
+<h2 id='move'>Move</h2>
+<p>This command can be used to move the player in the watching direction. The player will always be moved by 1 in the map area if it is possible.</p>
+<pre class="highlight go tab-go"><code><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Move</span><span class="p">(</span><span class="n">vikebot</span><span class="o">.</span><span class="n">DirectionNorth</span><span class="p">)</span><span class="x">
 </span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
     </span><span class="c">// Something "bad" happend. Maybe you violated the move restrictions?</span><span class="x">
 </span><span class="p">}</span><span class="x">
@@ -413,7 +421,7 @@
 <span class="p">{</span>
     <span class="c1">// Something "bad" happend. Maybe you violated the move restrictions?</span>
 <span class="p">}</span>
-</code></pre><h2 id='attack'>Attack</h2><pre class="highlight go tab-go"><code><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Attack</span><span class="p">(</span><span class="n">vikebot</span><span class="o">.</span><span class="n">DirectionNorth</span><span class="p">)</span><span class="x">
+</code></pre><h2 id='attack'>Attack</h2><pre class="highlight go tab-go"><code><span class="n">enemyHealth</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Attack</span><span class="p">()</span><span class="x">
 </span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
     </span><span class="c">// Something "bad" happend. Maybe you</span><span class="x">
     </span><span class="c">//   - violated the attack restrictions?</span><span class="x">
@@ -431,7 +439,9 @@
     <span class="c1">//   - violated the attack restrictions?</span>
     <span class="c1">//   - attacked an empty field? (Hint: Check with the `Watch` instruction)</span>
 <span class="p">}</span>
-</code></pre><h2 id='radar'>Radar</h2><pre class="highlight go tab-go"><code><span class="k">var</span><span class="x"> </span><span class="n">counter</span><span class="x"> </span><span class="kt">int</span><span class="x">
+</code></pre>
+<p>This command can be used to attack an enemy in front of the player. The <code>enemyhealth</code> is returned as <code>int</code>. If the player kills the enemy, the counter for <code>kills</code> will be increased and the enemy&#39;s counter for <code>deaths</code> will also be increased.</p>
+<h2 id='radar'>Radar</h2><pre class="highlight go tab-go"><code><span class="k">var</span><span class="x"> </span><span class="n">counter</span><span class="x"> </span><span class="kt">int</span><span class="x">
 </span><span class="k">var</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="kt">error</span><span class="x">
 </span><span class="n">counter</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Radar</span><span class="p">()</span><span class="x">
 </span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
@@ -448,7 +458,7 @@
     <span class="c1">// Something "bad" happend. Maybe you violated the radar restrictions?</span>
 <span class="p">}</span>
 </code></pre>
-<p>This command can be used to determine the amount of people within the player&#39;s action area. The value is returned as <code>int</code>. The zone is a 11x11 matrix with the player in it&#39;s center.</p>
+<p>This command can be used to determine the amount of people within the player&#39;s action area. The value is returned as <code>int</code>. The zone is a <code>11x11 matrix</code> with the player in its center.</p>
 
 <p>The example below would return <code>4</code>.</p>
 
