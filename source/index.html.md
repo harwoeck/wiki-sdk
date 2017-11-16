@@ -80,13 +80,17 @@ The mentioned website uses our open websocket protocol to receive special prepro
 
 ## Health
 
-Each player start's with a default of `100` health-points (`HP`). Every time someone hits you the damage will be subtracted of your current `HP`.
+Each player start's with a default of `100` health-points (`HP`). Every time someone hits you the damage will be subtracted of your current `HP`. The moment you reach a value below `1 HP` you die and your deaths counter will be increased once.
 
 ## Location
 
 At the start of the game each character will get randomly placed in the map. The map itself has a fixed per game size that doesn't change. There is no way to tell the absolute position of your player. You can't run out of this borders.
 
 To check whether you are close to the edge inspect the `MapEntity` returned from `Environment` action for `BlockType.EndOfMap`s.
+
+### Respawn after death
+
+If you die, the gameserver will respawn you with the default health points randomly on another position on the map.
 
 ## Orientation
 
