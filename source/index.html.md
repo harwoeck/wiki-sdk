@@ -90,7 +90,7 @@ To check whether you are close to the edge inspect the `MapEntity` returned from
 
 ## Orientation
 
-
+A player is able to watch in `4` directions: `directionNorth` , `directionEast` , `directionSouth` and `directionWest`where north is at the top of the map.
 
 # Instruct your Bot
 
@@ -101,8 +101,7 @@ game.Player.Rotate(vikebot.angleRight)
 // Your bot successfully rotated into the right direction (dirEast if default value is dirNorth)
 ```
 
-The player is able to watch in 4 different directions:
-`vikebot.DirectionNorth` , `vikebot.DirectionEast` , `vikebot.DirectionSouth` and `vikebot.DirectionWest` where north is at the top of the map. If the function is called with the string parameter `vikebot.angleRight` the player is rotating to the right and with `vikebot.angleLeft` the player is rotating to the left. Default watching direction of the player is `vikebot.DirectionNorth`
+ If the function is called with the string parameter `vikebot.angleRight` the player is rotating to the right and with `vikebot.angleLeft` the player is rotating to the left. Default watching direction of the player is `vikebot.DirectionNorth`
 
 ## Move
 
