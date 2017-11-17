@@ -388,3 +388,17 @@ Also you probaply want to consider some other parameters into your logic like ..
 
 - Health of your player
 - Amount of enemies in your area (`Radar`)
+
+# Abbreviations
+
+## User
+
+User specifies the real human person.
+
+## Player
+
+A player is a instance representing a user inside a game round. A player may be able to controll multiple characters.
+
+## Character
+
+A character is a single controllable entity placed inside the map. Each one has it's own location, health, etc.
