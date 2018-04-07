@@ -225,28 +225,39 @@ This command can be used to determine the `vikebot.BlockType` within the player'
 
 ```go
 var counter int
-counter, _ = game.Player.Scout(5)
+counter, err = game.Player.Scout(5)
+if err != nil {
+    // Something "bad" happend.
+}
 ```
 
 ```csharp
 int count = game.Player.Scout(5);
 ```
 
-Scout counts up the amount of people in the direction you are currently watching. You can specify how far the player "watches" with the argument to the function call.
+`Scout` counts up the amount of people in the direction you are currently watching. You can specify how far the player "watches" with the argument to the function call.
 
 <img alt="scout visualization" src="images/scout.png" width="400px">
 
 ## Defend and Undefend
 
 ```go
-
-
+err := game.Player.Defend()
+if err != nil {
+    // The player is already in defense mode
+}
+err = game.Player.Undefend()
+if err != nil {
+    // The player is already not defending
+}
 ```
 
 ```csharp
 
 ```
+`Defend` puts the player in a defense mode, that way the player gets only half of the damage. When the fight is over the player can get out of the defense mode with `undefend`.
 
+<img alt="defend and undefend visualization" src="images/defend_undefend.png" width="400px">
 # Types
 
 ## Direction
