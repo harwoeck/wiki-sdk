@@ -38,6 +38,8 @@ Because of extrem differences in the SDK installation process please visit the r
 
 ## Register for a game
 
+You can register for a game on your <a href="app.vikebot.com/dashboard">vikebot.com dashboard</a>, then you will receive an `AUTH-THOKEN`.
+
 ## Connect to the server
 
 ```go
@@ -66,7 +68,7 @@ namespace MyBot
 }
 ```
 
-Before your bot can execute any commands you need to connect to the server. This is mostly done be the SDKs. The only thing left for you is to copy your `authtoken` from your [dashboard](https://app.vikebot.com) into your code.
+Before your bot can execute any commands you need to connect to the server. This is mostly done by the SDKs. The only thing left for you is to copy your `authtoken` from your [dashboard](https://app.vikebot.com) into your code.
 
 ## See the results
 
