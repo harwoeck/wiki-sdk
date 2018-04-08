@@ -255,6 +255,9 @@
                     <a href="#location" class="toc-h2 toc-link" data-title="About your Bot">Location</a>
                   </li>
                   <li>
+                    <a href="#respawn-after-death" class="toc-h2 toc-link" data-title="About your Bot">Respawn after death</a>
+                  </li>
+                  <li>
                     <a href="#orientation" class="toc-h2 toc-link" data-title="About your Bot">Orientation</a>
                   </li>
               </ul>
@@ -411,12 +414,12 @@
 <h1 id='about-your-bot'>About your Bot</h1>
 <p><img src="images/soldier.png" alt="bot" /></p>
 <h2 id='health'>Health</h2>
-<p>Each player start&#39;s with a default of <code>100</code> health-points (<code>HP</code>). Every time someone hits you the damage will be subtracted of your current <code>HP</code>. The moment you reach a value below <code>1 HP</code> you die and your deaths counter will be increased once.</p>
+<p>Each player start&#39;s with a default of <code>100</code> health-points (<code>HP</code>). Every time someone hits you the damage will be subtracted of your current <code>HP</code>. The moment you reach a value below <code>1 HP</code> you die and your deaths counter will be increased once. After death you will respawn.</p>
 <h2 id='location'>Location</h2>
 <p>At the start of the game each character will get randomly placed in the map. The map itself has a fixed per game size that doesn&#39;t change. There is no way to tell the absolute position of your player. You can&#39;t run out of this borders.</p>
 
 <p>To check whether you are close to the edge inspect the <code>MapEntity</code> returned from <code>Environment</code> action for <code>BlockType.EndOfMap</code>s.</p>
-<h3 id='respawn-after-death'>Respawn after death</h3>
+<h2 id='respawn-after-death'>Respawn after death</h2>
 <p>If you die, the gameserver will respawn you with the default health points randomly on another position on the map.</p>
 <h2 id='orientation'>Orientation</h2>
 <p>A player is able to watch in <code>4</code> directions: <code>directionNorth</code> , <code>directionEast</code> , <code>directionSouth</code> and <code>directionWest</code>where north is at the top of the map.</p>
@@ -427,7 +430,7 @@
 
 <p>On the image below, the bot is watching in <code>vikebot.DirectionEast</code></p>
 
-<p><img alt="rotate visualization" src="images/bot_rotate.png" width="400px"></p>
+<p><img alt="rotate visualization" src="images/bot_rotate" width="400px"></p>
 <h2 id='move'>Move</h2><pre class="highlight go tab-go"><code><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Move</span><span class="p">()</span><span class="x">
 </span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
     </span><span class="c">// Something "bad" happend. Maybe you violated the move restrictions?</span><span class="x">
