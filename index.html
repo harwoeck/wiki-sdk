@@ -380,7 +380,9 @@
 <p>You have choosen a SDK and now want to install it. Perfect! Just read below.</p>
 
 <p>Because of extrem differences in the SDK installation process please visit the repository of your sdk to get specific instructions. In general installation guidelines should be one of the first things in the project&#39;s README. After a successful installation come back to this site.</p>
-<h1 id='start-playing'>Start playing</h1><h2 id='register-for-a-game'>Register for a game</h2><h2 id='connect-to-the-server'>Connect to the server</h2><pre class="highlight go tab-go"><code><span class="k">import</span><span class="x"> </span><span class="s">"github.com/harwoeck/vikebot-go"</span><span class="x">
+<h1 id='start-playing'>Start playing</h1><h2 id='register-for-a-game'>Register for a game</h2>
+<p>You can register for a game on your <a href="app.vikebot.com/dashboard">vikebot.com dashboard</a>, then you will receive an <code>AUTH-THOKEN</code>.</p>
+<h2 id='connect-to-the-server'>Connect to the server</h2><pre class="highlight go tab-go"><code><span class="k">import</span><span class="x"> </span><span class="s">"github.com/harwoeck/vikebot-go"</span><span class="x">
 
 </span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
     </span><span class="n">game</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">vikebot</span><span class="o">.</span><span class="n">MustJoin</span><span class="p">(</span><span class="s">"YOUR-AUTHTOKEN"</span><span class="p">)</span><span class="x">
@@ -401,7 +403,7 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-<p>Before your bot can execute any commands you need to connect to the server. This is mostly done be the SDKs. The only thing left for you is to copy your <code>authtoken</code> from your <a href="https://app.vikebot.com">dashboard</a> into your code.</p>
+<p>Before your bot can execute any commands you need to connect to the server. This is mostly done by the SDKs. The only thing left for you is to copy your <code>authtoken</code> from your <a href="https://app.vikebot.com">dashboard</a> into your code.</p>
 <h2 id='see-the-results'>See the results</h2>
 <p>If you want to see a graphical representation of the game&#39;s current state (e.g. your player moving while you execute your bot code) open <a href="https://watch.vikebot.com/YOUR-WATCHTOKEN">https://watch.vikebot.com/YOUR-WATCHTOKEN</a> in your browser where the <code>watchtoken</code> can again be copied from your dashboard.</p>
 
