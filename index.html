@@ -210,7 +210,7 @@
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo.png" class="logo" alt="Logo" />
+      <img src="images/vikebot_logo" class="logo" alt="Vikebot logo" />
         <div class="lang-selector">
               <a href="#" data-language-name="go">GO</a>
               <a href="#" data-language-name="csharp">C#</a>
@@ -500,16 +500,29 @@
 
 <p><img alt="environment visualization" src="images/environment.png" width="400px"></p>
 <h2 id='scout'>Scout</h2><pre class="highlight go tab-go"><code><span class="k">var</span><span class="x"> </span><span class="n">counter</span><span class="x"> </span><span class="kt">int</span><span class="x">
-</span><span class="n">counter</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Scout</span><span class="p">(</span><span class="m">5</span><span class="p">)</span><span class="x">
+</span><span class="n">counter</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Scout</span><span class="p">(</span><span class="m">5</span><span class="p">)</span><span class="x">
+</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="c">// Something "bad" happend.</span><span class="x">
+</span><span class="p">}</span><span class="x">
 </span></code></pre><pre class="highlight csharp tab-csharp"><code><span class="kt">int</span> <span class="n">count</span> <span class="p">=</span> <span class="n">game</span><span class="p">.</span><span class="n">Player</span><span class="p">.</span><span class="nf">Scout</span><span class="p">(</span><span class="m">5</span><span class="p">);</span>
 </code></pre>
-<p>Scout counts up the amount of people in the direction you are currently watching. You can specify how far the player &quot;watches&quot; with the argument to the function call.</p>
+<p><code>Scout</code> counts up the amount of people in the direction you are currently watching. You can specify how far the player &quot;watches&quot; with the argument to the function call.</p>
 
 <p><img alt="scout visualization" src="images/scout.png" width="400px"></p>
-<h2 id='defend-and-undefend'>Defend and Undefend</h2><pre class="highlight go tab-go"><code><span class="x">
-
+<h2 id='defend-and-undefend'>Defend and Undefend</h2><pre class="highlight go tab-go"><code><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Defend</span><span class="p">()</span><span class="x">
+</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="c">// The player is already in defense mode</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span><span class="n">err</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Undefend</span><span class="p">()</span><span class="x">
+</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="c">// The player is already not defending</span><span class="x">
+</span><span class="p">}</span><span class="x">
 </span></code></pre><pre class="highlight csharp tab-csharp"><code>
-</code></pre><h1 id='types'>Types</h1><h2 id='direction'>Direction</h2><pre class="highlight go tab-go"><code><span class="n">north</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">vikebot</span><span class="o">.</span><span class="n">DirectionNorth</span><span class="x">
+</code></pre>
+<p><code>Defend</code> puts the player in a defense mode, that way the player gets only half of the damage. When the fight is over the player can get out of the defense mode with <code>undefend</code>.</p>
+
+<p><img alt="defend and undefend visualization" src="images/defend_undefend.png" width="400px"></p>
+<h1 id='types'>Types</h1><h2 id='direction'>Direction</h2><pre class="highlight go tab-go"><code><span class="n">north</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">vikebot</span><span class="o">.</span><span class="n">DirectionNorth</span><span class="x">
 </span><span class="n">east</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">vikebot</span><span class="o">.</span><span class="n">DirectionEast</span><span class="x">
 </span><span class="n">south</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">vikebot</span><span class="o">.</span><span class="n">DirectionSouth</span><span class="x">
 </span><span class="n">west</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">vikebot</span><span class="o">.</span><span class="n">DirectionWest</span><span class="x">
