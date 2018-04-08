@@ -109,6 +109,10 @@ game.Player.Rotate(vikebot.angleRight)
 
  If the function is called with the string parameter `vikebot.angleRight` the player is rotating to the right and with `vikebot.angleLeft` the player is rotating to the left. Default watching direction of the player is `vikebot.DirectionNorth`
 
+ On the image below, the bot is watching in `vikebot.DirectionEast`
+
+ <img alt="rotate visualization" src="images/bot_rotate" width="400px">
+
 ## Move
 
 ```go
