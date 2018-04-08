@@ -38,7 +38,7 @@ Because of extrem differences in the SDK installation process please visit the r
 
 ## Register for a game
 
-You can register for a game on your <a href="app.vikebot.com/dashboard">vikebot.com dashboard</a>, then you will receive an `AUTH-THOKEN`.
+You can register for a game on your <a href="app.vikebot.com/dashboard">vikebot dashboard</a>, then you will receive an `AUTH-THOKEN`.
 
 ## Connect to the server
 
