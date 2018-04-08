@@ -255,7 +255,7 @@ if err != nil {
 ```csharp
 
 ```
-`Defend` puts the player in a defense mode, that way the player gets only half of the damage. When the fight is over the player can get out of the defense mode with `undefend`.
+`Defend` puts the player in a defense mode, that way the player gets only half of the damage. While the player is defending he/she isn't able to move. When the fight is over or the player wants to move away he/she can get out of the defense mode with `undefend`. 
 
 <img alt="defend and undefend visualization" src="images/defend_undefend.png" width="400px">
 # Types
