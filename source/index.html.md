@@ -111,7 +111,7 @@ game.Player.Rotate(vikebot.angleRight)
 
  On the image below, the bot is watching in `vikebot.DirectionEast`
 
- <img alt="rotate visualization" src="images/bot_rotate.png" width="400px">
+ <img alt="rotate visualization" src="images/rotate.png" width="400px">
 
 ## Move
 
