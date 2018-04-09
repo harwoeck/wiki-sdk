@@ -9,6 +9,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
 toc_footers:
 - <a href="https://vikebot.com" target="_blank">Sign Up to play a game</a>
 ---
+# Official vikebot sdk - wiki
 # Choose your language
 
 ## Official SDKs
