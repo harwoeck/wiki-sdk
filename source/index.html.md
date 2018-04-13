@@ -187,24 +187,16 @@ The example below would return `4`.
 ## Watch
 
 ```go
-var myArea vikebot.MapEntity
-myArea, err = game.Player.Watch()
+var healthMap [][]int
+healthMap, err = game.Player.Watch()
 if err != nil {
     // Something "bad" happend. Maybe you violated the watch restrictions?
 }
-// Safed the players around you
+// Handle the health information
 ```
 
 ```csharp
-try
-{
-    MapEntity myArea = game.Player.Watch();
-    // Safed the players around you
-}
-catch (InvalidGameActionException exc)
-{
-    // Something "bad" happend. Maybe you violated the watch restrictions?
-}
+
 ```
 
 This command can be used to determine the `PlayerHealth` within the player's watching area. The value is returned as a `int`. The zone is a `5x11` matrix in case of the player is watching in `vikebot.DirectionNorth`.
