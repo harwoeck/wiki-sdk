@@ -483,21 +483,13 @@
 <p>The example below would return <code>4</code>.</p>
 
 <p><img alt="radar visualization" src="images/radar.png" width="400px"></p>
-<h2 id='watch'>Watch</h2><pre class="highlight go tab-go"><code><span class="k">var</span><span class="x"> </span><span class="n">myArea</span><span class="x"> </span><span class="n">vikebot</span><span class="o">.</span><span class="n">MapEntity</span><span class="x">
-</span><span class="n">myArea</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Watch</span><span class="p">()</span><span class="x">
+<h2 id='watch'>Watch</h2><pre class="highlight go tab-go"><code><span class="k">var</span><span class="x"> </span><span class="n">healthMap</span><span class="x"> </span><span class="p">[][]</span><span class="kt">int</span><span class="x">
+</span><span class="n">healthMap</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Watch</span><span class="p">()</span><span class="x">
 </span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
     </span><span class="c">// Something "bad" happend. Maybe you violated the watch restrictions?</span><span class="x">
 </span><span class="p">}</span><span class="x">
-</span><span class="c">// Safed the players around you</span><span class="x">
-</span></code></pre><pre class="highlight csharp tab-csharp"><code><span class="k">try</span>
-<span class="p">{</span>
-    <span class="n">MapEntity</span> <span class="n">myArea</span> <span class="p">=</span> <span class="n">game</span><span class="p">.</span><span class="n">Player</span><span class="p">.</span><span class="nf">Watch</span><span class="p">();</span>
-    <span class="c1">// Safed the players around you</span>
-<span class="p">}</span>
-<span class="k">catch</span> <span class="p">(</span><span class="n">InvalidGameActionException</span> <span class="n">exc</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="c1">// Something "bad" happend. Maybe you violated the watch restrictions?</span>
-<span class="p">}</span>
+</span><span class="c">// Handle the health information</span><span class="x">
+</span></code></pre><pre class="highlight csharp tab-csharp"><code>
 </code></pre>
 <p>This command can be used to determine the <code>PlayerHealth</code> within the player&#39;s watching area. The value is returned as a <code>int</code>. The zone is a <code>5x11</code> matrix in case of the player is watching in <code>vikebot.DirectionNorth</code>.</p>
 
