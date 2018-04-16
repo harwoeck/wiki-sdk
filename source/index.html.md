@@ -117,14 +117,14 @@ game.Player.Rotate(vikebot.angleRight)
 ## Move
 
 ```go
-err := game.Player.Move()
+err := game.Player.Move(vikebot.DirectionNorth)
 if err != nil {
     // Something "bad" happend. Maybe you violated the move restrictions?
 }
 // Your bot successfully moved into into cardinal-direction NORTH
 ```
 
-This command can be used to move the player in the watching direction. The player will always be `moved by 1` in the map area if it is possible.
+This command can be used to move the player in the given `vikebot.Direction`. The player will always be `moved by 1` in the map area if it is possible. So moving in `vikebot.DirectionEast` while watching in `vikebot.DirectionNorth` is possible.
 
 ## Attack
 
