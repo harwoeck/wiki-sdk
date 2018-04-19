@@ -223,8 +223,7 @@ This command can be used to determine the `vikebot.BlockType` within the player'
 ## Scout
 
 ```go
-var counter int
-counter, err = game.Player.Scout(5)
+counter, err := game.Player.Scout(5)
 if err != nil {
     // Something "bad" happend.
 }
