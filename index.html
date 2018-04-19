@@ -503,8 +503,7 @@
 <p>This command can be used to determine the <code>vikebot.BlockType</code> within the player&#39;s action area. The value is returned as a <code>string</code>. The zone is a <code>11x11</code> matrix with the player in its center.</p>
 
 <p><img alt="environment visualization" src="images/environment.png" width="400px"></p>
-<h2 id='scout'>Scout</h2><pre class="highlight go tab-go"><code><span class="k">var</span><span class="x"> </span><span class="n">counter</span><span class="x"> </span><span class="kt">int</span><span class="x">
-</span><span class="n">counter</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Scout</span><span class="p">(</span><span class="m">5</span><span class="p">)</span><span class="x">
+<h2 id='scout'>Scout</h2><pre class="highlight go tab-go"><code><span class="n">counter</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Scout</span><span class="p">(</span><span class="m">5</span><span class="p">)</span><span class="x">
 </span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
     </span><span class="c">// Something "bad" happend.</span><span class="x">
 </span><span class="p">}</span><span class="x">
