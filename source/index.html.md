@@ -103,16 +103,16 @@ A player is able to watch in `4` directions: `directionNorth` , `directionEast` 
 
 These ratelimits are describing how often an command can be called `per second` from a client. Therefore a `1` means the client is able to call this operation each second `once`. A `2` means the client can use the operation `twice` a second.
 
-| Operation | Ratelimit |
-| --------- | --------- |
-|Rotate | 2|
-| Move   | 1|
-|Attack | 10|
-|Radar | 1|
-|Watch | 5|
-|Environment | 5|
-|Scout | 2|
-|Defend and Undefend | 5|
+| Operation | Ratelimit | Time (ms) |
+| --------- | --------- | ----- |
+|Rotate | 2| 500 |
+| Move   | 1| 1000 |
+|Attack | 3| 300 |
+|Radar | 1| 1000 |
+|Watch | 2| 500 |
+|Environment | 4| 250 | 
+|Scout | 2| 500 | 
+|Defend and Undefend | 1| 1000 |
 
 # Instruct your Bot
 
