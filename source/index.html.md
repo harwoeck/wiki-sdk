@@ -105,13 +105,13 @@ These ratelimits are describing how often an command can be called `per second` 
 
 | Operation | Ratelimit |
 | --------- | --------- |
-| Move   | 1|
 |Rotate | 2|
-|Radar | 1|
-|Scout | 2|
-|Environment | 5
-|Watch | 5|
+| Move   | 1|
 |Attack | 10|
+|Radar | 1|
+|Watch | 5|
+|Environment | 5|
+|Scout | 2|
 |Defend and Undefend | 5|
 
 # Instruct your Bot
