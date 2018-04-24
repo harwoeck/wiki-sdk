@@ -263,6 +263,9 @@
                   <li>
                     <a href="#orientation" class="toc-h2 toc-link" data-title="About your Bot">Orientation</a>
                   </li>
+                  <li>
+                    <a href="#ratelimitation" class="toc-h2 toc-link" data-title="About your Bot">Ratelimitation</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -426,7 +429,49 @@
 <p>If you die, the gameserver will respawn you with the default health points randomly on another position on the map.</p>
 <h2 id='orientation'>Orientation</h2>
 <p>A player is able to watch in <code>4</code> directions: <code>directionNorth</code> , <code>directionEast</code> , <code>directionSouth</code> and <code>directionWest</code>where north is at the top of the map.</p>
-<h1 id='instruct-your-bot'>Instruct your Bot</h1><h2 id='rotate'>Rotate</h2><pre class="highlight go tab-go"><code><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Rotate</span><span class="p">(</span><span class="n">vikebot</span><span class="o">.</span><span class="n">angleRight</span><span class="p">)</span><span class="x">
+<h2 id='ratelimitation'>Ratelimitation</h2>
+<p>These ratelimits are describing how often an command can be called <code>per second</code> from a client. Therefore a <code>1</code> means the client is able to call this operation each second <code>once</code>. A <code>2</code> means the client can use the operation <code>twice</code> a second.</p>
+
+<table><thead>
+<tr>
+<th>Operation</th>
+<th>Ratelimit</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Move</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Rotate</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Radar</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Scout</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Environment</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Watch</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Attack</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Defend and Undefend</td>
+<td>5</td>
+</tr>
+</tbody></table>
+<h1 id='instruct-your-bot'>Instruct your Bot</h1><h2 id='rotate'>Rotate</h2><pre class="highlight go tab-go"><code><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Rotate</span><span class="p">(</span><span class="n">vikebot</span><span class="o">.</span><span class="n">AngleRight</span><span class="p">)</span><span class="x">
 </span><span class="c">// Your bot successfully rotated into the right direction (dirEast if default value is dirNorth)</span><span class="x">
 </span></code></pre>
 <p>If the function is called with the string parameter <code>vikebot.angleRight</code> the player is rotating to the right and with <code>vikebot.angleLeft</code> the player is rotating to the left. Default watching direction of the player is <code>vikebot.DirectionNorth</code></p>
