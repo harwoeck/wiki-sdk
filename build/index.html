@@ -1,0 +1,766 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Vikebot Docs</title>
+    <link href="images/favicon.ico" rel="icon" type="image/ico" />
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all_nosearch.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;go&quot;,&quot;csharp&quot;,&quot;java&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/vikebot_logo.png" class="logo" alt="Vikebot logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="go">GO</a>
+              <a href="#" data-language-name="csharp">C#</a>
+              <a href="#" data-language-name="java">Java</a>
+        </div>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#official-vikebot-sdk-wiki" class="toc-h1 toc-link" data-title="Official vikebot sdk - wiki">Official vikebot sdk - wiki</a>
+          </li>
+          <li>
+            <a href="#choose-your-language" class="toc-h1 toc-link" data-title="Choose your language">Choose your language</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#official-sdks" class="toc-h2 toc-link" data-title="Choose your language">Official SDKs</a>
+                  </li>
+                  <li>
+                    <a href="#community-maintained-sdks" class="toc-h2 toc-link" data-title="Choose your language">Community maintained SDKs</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#install" class="toc-h1 toc-link" data-title="Install">Install</a>
+          </li>
+          <li>
+            <a href="#start-playing" class="toc-h1 toc-link" data-title="Start playing">Start playing</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#register-for-a-game" class="toc-h2 toc-link" data-title="Start playing">Register for a game</a>
+                  </li>
+                  <li>
+                    <a href="#connect-to-the-server" class="toc-h2 toc-link" data-title="Start playing">Connect to the server</a>
+                  </li>
+                  <li>
+                    <a href="#see-the-results" class="toc-h2 toc-link" data-title="Start playing">See the results</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#about-your-bot" class="toc-h1 toc-link" data-title="About your Bot">About your Bot</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#health" class="toc-h2 toc-link" data-title="About your Bot">Health</a>
+                  </li>
+                  <li>
+                    <a href="#location" class="toc-h2 toc-link" data-title="About your Bot">Location</a>
+                  </li>
+                  <li>
+                    <a href="#respawn-after-death" class="toc-h2 toc-link" data-title="About your Bot">Respawn after death</a>
+                  </li>
+                  <li>
+                    <a href="#orientation" class="toc-h2 toc-link" data-title="About your Bot">Orientation</a>
+                  </li>
+                  <li>
+                    <a href="#ratelimitation" class="toc-h2 toc-link" data-title="About your Bot">Ratelimitation</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#instruct-your-bot" class="toc-h1 toc-link" data-title="Instruct your Bot">Instruct your Bot</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#rotate" class="toc-h2 toc-link" data-title="Instruct your Bot">Rotate</a>
+                  </li>
+                  <li>
+                    <a href="#move" class="toc-h2 toc-link" data-title="Instruct your Bot">Move</a>
+                  </li>
+                  <li>
+                    <a href="#attack" class="toc-h2 toc-link" data-title="Instruct your Bot">Attack</a>
+                  </li>
+                  <li>
+                    <a href="#radar" class="toc-h2 toc-link" data-title="Instruct your Bot">Radar</a>
+                  </li>
+                  <li>
+                    <a href="#watch" class="toc-h2 toc-link" data-title="Instruct your Bot">Watch</a>
+                  </li>
+                  <li>
+                    <a href="#environment" class="toc-h2 toc-link" data-title="Instruct your Bot">Environment</a>
+                  </li>
+                  <li>
+                    <a href="#scout" class="toc-h2 toc-link" data-title="Instruct your Bot">Scout</a>
+                  </li>
+                  <li>
+                    <a href="#defend-and-undefend" class="toc-h2 toc-link" data-title="Instruct your Bot">Defend and Undefend</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#types" class="toc-h1 toc-link" data-title="Types">Types</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#direction" class="toc-h2 toc-link" data-title="Types">Direction</a>
+                  </li>
+                  <li>
+                    <a href="#blocktype" class="toc-h2 toc-link" data-title="Types">BlockType</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#examples" class="toc-h1 toc-link" data-title="Examples">Examples</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#the-cowardly-bot" class="toc-h2 toc-link" data-title="Examples">The cowardly bot</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#abbreviations" class="toc-h1 toc-link" data-title="Abbreviations">Abbreviations</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#user" class="toc-h2 toc-link" data-title="Abbreviations">User</a>
+                  </li>
+                  <li>
+                    <a href="#player" class="toc-h2 toc-link" data-title="Abbreviations">Player</a>
+                  </li>
+                  <li>
+                    <a href="#character" class="toc-h2 toc-link" data-title="Abbreviations">Character</a>
+                  </li>
+              </ul>
+          </li>
+      </div>
+        <ul class="toc-footer">
+            <li><a href="https://vikebot.com" target="_blank">Sign Up to play a game</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='official-vikebot-sdk-wiki'>Official vikebot sdk - wiki</h1><h1 id='choose-your-language'>Choose your language</h1><h2 id='official-sdks'>Official SDKs</h2>
+<p>The vikebot team maintains a handful official SDKs. You can see a list of all of them including links to their repositories below.</p>
+
+<table><thead>
+<tr>
+<th>Language</th>
+<th>Logo</th>
+<th>Version</th>
+<th>Maintainer</th>
+<th>Repository</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GO</td>
+<td><img alt="golang logo" src="images/lang/go.png" width="50px"></td>
+<td><em>Development</em></td>
+<td><a href="https://github.com/harwoeck">@harwoeck</a></td>
+<td><a href="https://github.com/harwoeck/vikebot-go">github.com/harwoeck/vikebot-go</a></td>
+</tr>
+<tr>
+<td>C#</td>
+<td><img alt="csharp logo" src="images/lang/csharp.png" width="50px"></td>
+<td><em>Unreleased</em></td>
+<td><a href="https://github.com/harwoeck">@harwoeck</a></td>
+<td><a href="https://github.com/harwoeck/vikebot-csharp">github.com/harwoeck/vikebot-csharp</a></td>
+</tr>
+</tbody></table>
+<h2 id='community-maintained-sdks'>Community maintained SDKs</h2>
+<p>We heavily rely on our community to contribute to this project. If you would like to help you can implement SDKs in new languages. We&#39;ld then love to link it and add documentation here. We think a single place where we collect all the infromation needed suits well, espacially for beginners. If you have any questions you call always contact us on any support channel.</p>
+
+<table><thead>
+<tr>
+<th>Language</th>
+<th>Logo</th>
+<th>Version</th>
+<th>Maintainer</th>
+<th>Repository</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Java</td>
+<td><img alt="java logo" src="images/lang/java.png" width="50px"></td>
+<td><em>Unreleased</em></td>
+<td><a href="https://github.com/phillip-r99">@phillip-r99</a></td>
+<td><a href="https://github.com/vikebot/vikebot-java">github.com/vikebot/vikebot-java</a></td>
+</tr>
+</tbody></table>
+<h1 id='install'>Install</h1>
+<p>You have choosen a SDK and now want to install it. Perfect! Just read below.</p>
+
+<p>Because of extrem differences in the SDK installation process please visit the repository of your sdk to get specific instructions. In general installation guidelines should be one of the first things in the project&#39;s README. After a successful installation come back to this site.</p>
+<h1 id='start-playing'>Start playing</h1><h2 id='register-for-a-game'>Register for a game</h2>
+<p>You can register for a game on your <a href="app.vikebot.com/dashboard">vikebot dashboard</a>, then you will receive an <code>AUTH-THOKEN</code>.</p>
+<h2 id='connect-to-the-server'>Connect to the server</h2><pre class="highlight go tab-go"><code><span class="k">import</span><span class="x"> </span><span class="s">"github.com/harwoeck/vikebot-go"</span><span class="x">
+
+</span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="n">game</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">vikebot</span><span class="o">.</span><span class="n">MustJoin</span><span class="p">(</span><span class="s">"YOUR-AUTHTOKEN"</span><span class="p">)</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre><pre class="highlight csharp tab-csharp"><code><span class="k">using</span> <span class="nn">vikebot</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="nn">MyBot</span>
+<span class="p">{</span>
+    <span class="k">class</span> <span class="nc">MyBot</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">(</span><span class="kt">string</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">using</span><span class="p">(</span><span class="n">Game</span> <span class="n">game</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Game</span><span class="p">(</span><span class="s">"YOUR-AUTHTOKEN"</span><span class="p">))</span>
+            <span class="p">{</span>
+
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p>Before your bot can execute any commands you need to connect to the server. This is mostly done by the SDKs. The only thing left for you is to copy your <code>authtoken</code> from your <a href="https://app.vikebot.com">dashboard</a> into your code.</p>
+<h2 id='see-the-results'>See the results</h2>
+<p>If you want to see a graphical representation of the game&#39;s current state (e.g. your player moving while you execute your bot code) open <a href="https://watch.vikebot.com/YOUR-WATCHTOKEN">https://watch.vikebot.com/YOUR-WATCHTOKEN</a> in your browser where the <code>watchtoken</code> can again be copied from your dashboard.</p>
+
+<p>The mentioned website uses our open websocket protocol to receive special preprossed data that can be easily rendered. All people who want to do their own graphical rendering can also use this protocol and informations provided in the reference implementation.</p>
+<h1 id='about-your-bot'>About your Bot</h1>
+<p><img src="images/soldier.png" alt="bot" /></p>
+<h2 id='health'>Health</h2>
+<p>Each player start&#39;s with a default of <code>100</code> health-points (<code>HP</code>). Every time someone hits you the damage will be subtracted of your current <code>HP</code>. The moment you reach a value below <code>1 HP</code> you die and your deaths counter will be increased once. After death you will respawn.</p>
+<h2 id='location'>Location</h2>
+<p>At the start of the game each character will get randomly placed in the map. The map itself has a fixed per game size that doesn&#39;t change. There is no way to tell the absolute position of your player. You can&#39;t run out of this borders.</p>
+
+<p>To check whether you are close to the edge inspect the <code>MapEntity</code> returned from <code>Environment</code> action for <code>BlockType.EndOfMap</code>s.</p>
+<h2 id='respawn-after-death'>Respawn after death</h2>
+<p>If you die, the gameserver will respawn you with the default health points randomly on another position on the map.</p>
+<h2 id='orientation'>Orientation</h2>
+<p>A player is able to watch in <code>4</code> directions: <code>directionNorth</code> , <code>directionEast</code> , <code>directionSouth</code> and <code>directionWest</code>where north is at the top of the map.</p>
+<h2 id='ratelimitation'>Ratelimitation</h2>
+<p>These ratelimits are describing how often an command can be called <code>per second</code> from a client. Therefore a <code>1</code> means the client is able to call this operation each second <code>once</code>. A <code>2</code> means the client can use the operation <code>twice</code> a second.</p>
+
+<table><thead>
+<tr>
+<th>Operation</th>
+<th>Ratelimit</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Move</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Rotate</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Radar</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Scout</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Environment</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Watch</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Attack</td>
+<td>10</td>
+</tr>
+<tr>
+<td>Defend and Undefend</td>
+<td>5</td>
+</tr>
+</tbody></table>
+<h1 id='instruct-your-bot'>Instruct your Bot</h1><h2 id='rotate'>Rotate</h2><pre class="highlight go tab-go"><code><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Rotate</span><span class="p">(</span><span class="n">vikebot</span><span class="o">.</span><span class="n">AngleRight</span><span class="p">)</span><span class="x">
+</span><span class="c">// Your bot successfully rotated into the right direction (dirEast if default value is dirNorth)</span><span class="x">
+</span></code></pre>
+<p>If the function is called with the string parameter <code>vikebot.angleRight</code> the player is rotating to the right and with <code>vikebot.angleLeft</code> the player is rotating to the left. Default watching direction of the player is <code>vikebot.DirectionNorth</code></p>
+
+<p>On the image below, the bot is watching in <code>vikebot.DirectionEast</code></p>
+
+<p><img alt="rotate visualization" src="images/rotate.png" width="400px"></p>
+<h2 id='move'>Move</h2><pre class="highlight go tab-go"><code><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Move</span><span class="p">(</span><span class="n">vikebot</span><span class="o">.</span><span class="n">DirectionNorth</span><span class="p">)</span><span class="x">
+</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="c">// Something "bad" happend. Maybe you violated the move restrictions?</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span><span class="c">// Your bot successfully moved into into cardinal-direction NORTH</span><span class="x">
+</span></code></pre>
+<p>This command can be used to move the player in the given <code>vikebot.Direction</code>. The player will always be <code>moved by 1</code> in the map area if it is possible. So moving in <code>vikebot.DirectionEast</code> while watching in <code>vikebot.DirectionNorth</code> is possible.</p>
+<h2 id='attack'>Attack</h2><pre class="highlight go tab-go"><code><span class="n">enemyHealth</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Attack</span><span class="p">()</span><span class="x">
+</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="c">// Something "bad" happend. Maybe you</span><span class="x">
+    </span><span class="c">//   - violated the attack restrictions?</span><span class="x">
+    </span><span class="c">//   - attacked an empty field? (Hint: Check with the `Watch` instruction)</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span><span class="c">// Your bot hitted someone standing the field specified by your direction</span><span class="x">
+</span></code></pre><pre class="highlight csharp tab-csharp"><code><span class="k">try</span>
+<span class="p">{</span>
+    <span class="n">game</span><span class="p">.</span><span class="n">Player</span><span class="p">.</span><span class="nf">Attack</span><span class="p">(</span><span class="n">Direction</span><span class="p">.</span><span class="n">North</span><span class="p">);</span>
+    <span class="c1">// Your bot hitted someone standing the field specified by your direction</span>
+<span class="p">}</span>
+<span class="k">catch</span> <span class="p">(</span><span class="n">InvalidGameActionException</span> <span class="n">exc</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Something "bad" happend. Maybe you</span>
+    <span class="c1">//   - violated the attack restrictions?</span>
+    <span class="c1">//   - attacked an empty field? (Hint: Check with the `Watch` instruction)</span>
+<span class="p">}</span>
+</code></pre>
+<p>This command can be used to attack an enemy in front of the player. The <code>Enemyhealth</code> is returned as <code>int</code>. If the player kills the enemy, the counter for <code>Kills</code> will be increased and the enemy&#39;s counter for <code>Deaths</code> will also be increased.</p>
+<h2 id='radar'>Radar</h2><pre class="highlight go tab-go"><code><span class="k">var</span><span class="x"> </span><span class="n">counter</span><span class="x"> </span><span class="kt">int</span><span class="x">
+</span><span class="k">var</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="kt">error</span><span class="x">
+</span><span class="n">counter</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Radar</span><span class="p">()</span><span class="x">
+</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="c">// Something "bad" happend. Maybe you violated the radar restrictions?</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span><span class="c">// Yeah! We safed the amount of people in your area into the `counter` variable.</span><span class="x">
+</span></code></pre><pre class="highlight csharp tab-csharp"><code><span class="k">try</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">counter</span> <span class="p">=</span> <span class="n">game</span><span class="p">.</span><span class="n">Player</span><span class="p">.</span><span class="nf">Radar</span><span class="p">();</span>
+    <span class="c1">// Yeah! We safed the amount of people in your area into the `counter` variable.</span>
+<span class="p">}</span>
+<span class="k">catch</span> <span class="p">(</span><span class="n">InvalidGameActionException</span> <span class="n">exc</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Something "bad" happend. Maybe you violated the radar restrictions?</span>
+<span class="p">}</span>
+</code></pre>
+<p>This command can be used to determine the amount of people within the player&#39;s action area. The value is returned as <code>int</code>. The zone is a <code>11x11</code> matrix with the player in its center.</p>
+
+<p>The example below would return <code>4</code>.</p>
+
+<p><img alt="radar visualization" src="images/radar.png" width="400px"></p>
+<h2 id='watch'>Watch</h2><pre class="highlight go tab-go"><code><span class="k">var</span><span class="x"> </span><span class="n">healthMap</span><span class="x"> </span><span class="p">[][]</span><span class="kt">int</span><span class="x">
+</span><span class="n">healthMap</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Watch</span><span class="p">()</span><span class="x">
+</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="c">// Something "bad" happend. Maybe you violated the watch restrictions?</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span><span class="c">// Handle the health information</span><span class="x">
+</span></code></pre><pre class="highlight csharp tab-csharp"><code>
+</code></pre>
+<p>This command can be used to determine the <code>PlayerHealth</code> within the player&#39;s watching area. The value is returned as a <code>int</code>. The zone is a <code>5x11</code> matrix in case of the player is watching in <code>vikebot.DirectionNorth</code>.</p>
+
+<p>For Example if the direction where the player is watching is <code>vikebot.DirectionEast</code> the matrix is of the size <code>11x5</code> where <code>11</code> is the height <code>y</code>.</p>
+
+<p><img alt="watch visualization" src="images/watch.png" width="400px"></p>
+<h2 id='environment'>Environment</h2><pre class="highlight go tab-go"><code><span class="k">var</span><span class="x"> </span><span class="n">area</span><span class="x"> </span><span class="n">vikebot</span><span class="o">.</span><span class="n">EnvironmentEntity</span><span class="x">
+</span><span class="n">area</span><span class="p">,</span><span class="x"> </span><span class="n">_</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Environment</span><span class="p">()</span><span class="x">
+</span></code></pre><pre class="highlight csharp tab-csharp"><code><span class="n">EnvironmentEntity</span> <span class="n">ee</span> <span class="p">=</span> <span class="n">game</span><span class="p">.</span><span class="n">Player</span><span class="p">.</span><span class="nf">Environment</span><span class="p">();</span>
+</code></pre>
+<p>This command can be used to determine the <code>vikebot.BlockType</code> within the player&#39;s action area. The value is returned as a <code>string</code>. The zone is a <code>11x11</code> matrix with the player in its center.</p>
+
+<p><img alt="environment visualization" src="images/environment.png" width="400px"></p>
+<h2 id='scout'>Scout</h2><pre class="highlight go tab-go"><code><span class="n">counter</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Scout</span><span class="p">(</span><span class="m">5</span><span class="p">)</span><span class="x">
+</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="c">// Something "bad" happend.</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre><pre class="highlight csharp tab-csharp"><code><span class="kt">int</span> <span class="n">count</span> <span class="p">=</span> <span class="n">game</span><span class="p">.</span><span class="n">Player</span><span class="p">.</span><span class="nf">Scout</span><span class="p">(</span><span class="m">5</span><span class="p">);</span>
+</code></pre>
+<p><code>Scout</code> counts up the amount of people in the direction you are currently watching. You can specify how far the player &quot;watches&quot; with the argument to the function call.</p>
+
+<p><img alt="scout visualization" src="images/scout.png" width="400px"></p>
+<h2 id='defend-and-undefend'>Defend and Undefend</h2><pre class="highlight go tab-go"><code><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Defend</span><span class="p">()</span><span class="x">
+</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="c">// The player is already in defense mode</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span><span class="n">err</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">Undefend</span><span class="p">()</span><span class="x">
+</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="c">// The player is already not defending</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre><pre class="highlight csharp tab-csharp"><code>
+</code></pre>
+<p><code>Defend</code> puts the player in a defense mode, that way the player gets only half of the damage. While the player is defending he/she isn&#39;t able to move. When the fight is over or the player wants to move away he/she can get out of the defense mode with <code>undefend</code>. </p>
+
+<p><img alt="defend and undefend visualization" src="images/defend_undefend.png" width="400px"></p>
+<h1 id='types'>Types</h1><h2 id='direction'>Direction</h2><pre class="highlight go tab-go"><code><span class="n">north</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">vikebot</span><span class="o">.</span><span class="n">DirectionNorth</span><span class="x">
+</span><span class="n">east</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">vikebot</span><span class="o">.</span><span class="n">DirectionEast</span><span class="x">
+</span><span class="n">south</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">vikebot</span><span class="o">.</span><span class="n">DirectionSouth</span><span class="x">
+</span><span class="n">west</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">vikebot</span><span class="o">.</span><span class="n">DirectionWest</span><span class="x">
+</span></code></pre><pre class="highlight csharp tab-csharp"><code><span class="n">Direction</span> <span class="n">north</span> <span class="p">=</span> <span class="n">Direction</span><span class="p">.</span><span class="n">North</span><span class="p">;</span>
+<span class="n">Direction</span> <span class="n">east</span> <span class="p">=</span> <span class="n">Direction</span><span class="p">.</span><span class="n">East</span><span class="p">;</span>
+<span class="n">Direction</span> <span class="n">south</span> <span class="p">=</span> <span class="n">Direction</span><span class="p">.</span><span class="n">South</span><span class="p">;</span>
+<span class="n">Direction</span> <span class="n">west</span> <span class="p">=</span> <span class="n">Direction</span><span class="p">.</span><span class="n">West</span><span class="p">;</span>
+</code></pre>
+<p>Direction specifies one of the four cardinal-directions. Used in some different actions like <code>Move</code> or <code>Attack</code>.</p>
+
+<table><thead>
+<tr>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>North</code></td>
+<td>Specifies the cardinal-direction &quot;north&quot;</td>
+</tr>
+<tr>
+<td><code>East</code></td>
+<td>Specifies the cardinal-direction &quot;east&quot;</td>
+</tr>
+<tr>
+<td><code>South</code></td>
+<td>Specifies the cardinal-direction &quot;south&quot;</td>
+</tr>
+<tr>
+<td><code>West</code></td>
+<td>Specifies the cardinal-direction &quot;west&quot;</td>
+</tr>
+</tbody></table>
+<h2 id='blocktype'>BlockType</h2>
+<blockquote>
+<p>Usage: You can use this to equality-check a block&#39;s <code>Type</code> value.</p>
+</blockquote>
+<pre class="highlight go tab-go"><code><span class="n">swamp</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">vikebot</span><span class="o">.</span><span class="n">BlockSwamp</span><span class="x">
+</span><span class="n">stonetile</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">vikebot</span><span class="o">.</span><span class="n">BlockStonetile</span><span class="x">
+</span><span class="n">dirt</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">vikebot</span><span class="o">.</span><span class="n">BlockDirt</span><span class="x">
+</span><span class="n">grass</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">vikebot</span><span class="o">.</span><span class="n">BlockGrass</span><span class="x">
+</span><span class="n">lava</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">vikebot</span><span class="o">.</span><span class="n">BlockLava</span><span class="x">
+</span><span class="n">lavarock</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">vikebot</span><span class="o">.</span><span class="n">BlockLavarock</span><span class="x">
+</span><span class="n">water</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">vikebot</span><span class="o">.</span><span class="n">BlockWater</span><span class="x">
+</span><span class="n">endofmap</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">vikebot</span><span class="o">.</span><span class="n">BlockEndOfMap</span><span class="x">
+</span><span class="n">fog</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">vikebot</span><span class="o">.</span><span class="n">BlockFog</span><span class="x">
+</span></code></pre><pre class="highlight csharp tab-csharp"><code><span class="n">BlockType</span> <span class="n">swamp</span> <span class="p">=</span> <span class="n">BlockType</span><span class="p">.</span><span class="n">Swamp</span><span class="p">;</span>
+<span class="n">BlockType</span> <span class="n">stonetile</span> <span class="p">=</span> <span class="n">BlockType</span><span class="p">.</span><span class="n">Stonetile</span><span class="p">;</span>
+<span class="n">BlockType</span> <span class="n">dirt</span> <span class="p">=</span> <span class="n">BlockType</span><span class="p">.</span><span class="n">Dirt</span><span class="p">;</span>
+<span class="n">BlockType</span> <span class="n">grass</span> <span class="p">=</span> <span class="n">BlockType</span><span class="p">.</span><span class="n">Grass</span><span class="p">;</span>
+<span class="n">BlockType</span> <span class="n">lava</span> <span class="p">=</span> <span class="n">BlockType</span><span class="p">.</span><span class="n">Lava</span><span class="p">;</span>
+<span class="n">BlockType</span> <span class="n">lavarock</span> <span class="p">=</span> <span class="n">BlockType</span><span class="p">.</span><span class="n">Lavarock</span><span class="p">;</span>
+<span class="n">BlockType</span> <span class="n">water</span> <span class="p">=</span> <span class="n">BlockType</span><span class="p">.</span><span class="n">Water</span><span class="p">;</span>
+<span class="n">BlockType</span> <span class="n">endofmap</span> <span class="p">=</span> <span class="n">BlockType</span><span class="p">.</span><span class="n">EndOfMap</span><span class="p">;</span>
+<span class="n">BlockType</span> <span class="n">fog</span> <span class="p">=</span> <span class="n">BlockType</span><span class="p">.</span><span class="n">Fog</span><span class="p">;</span>
+</code></pre><pre class="highlight java tab-java"><code><span class="n">BlockType</span> <span class="n">swamp</span> <span class="o">=</span> <span class="n">BlockType</span><span class="o">.</span><span class="na">SWAMP</span><span class="o">;</span>
+<span class="n">BlockType</span> <span class="n">stonetile</span> <span class="o">=</span> <span class="n">BlockType</span><span class="o">.</span><span class="na">STONETILE</span><span class="o">;</span>
+<span class="n">BlockType</span> <span class="n">dirt</span> <span class="o">=</span> <span class="n">BlockType</span><span class="o">.</span><span class="na">DIRT</span><span class="o">;</span>
+<span class="n">BlockType</span> <span class="n">grass</span> <span class="o">=</span> <span class="n">BlockType</span><span class="o">.</span><span class="na">GRASS</span><span class="o">;</span>
+<span class="n">BlockType</span> <span class="n">lava</span> <span class="o">=</span> <span class="n">BlockType</span><span class="o">.</span><span class="na">LAVA</span><span class="o">;</span>
+<span class="n">BlockType</span> <span class="n">lavarock</span> <span class="o">=</span> <span class="n">BlockType</span><span class="o">.</span><span class="na">LAVAROCK</span><span class="o">;</span>
+<span class="n">BlockType</span> <span class="n">water</span> <span class="o">=</span> <span class="n">BlockType</span><span class="o">.</span><span class="na">WATER</span><span class="o">;</span>
+<span class="n">BlockType</span> <span class="n">endofmap</span> <span class="o">=</span> <span class="n">BlockType</span><span class="o">.</span><span class="na">ENDOFMAP</span><span class="o">;</span>
+<span class="n">BlockType</span> <span class="n">fog</span> <span class="o">=</span> <span class="n">BlockType</span><span class="o">.</span><span class="na">FOG</span><span class="o">;</span>
+</code></pre>
+<table><thead>
+<tr>
+<th>Identification</th>
+<th>Image</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>Swamp</code></td>
+<td><img alt="swamp block" src="images/blocks/swamp.jpg" width="50px"></td>
+<td></td>
+</tr>
+<tr>
+<td><code>Stonetile</code></td>
+<td><img alt="stonetile block" src="images/blocks/stonetile.jpg" width="50px"></td>
+<td></td>
+</tr>
+<tr>
+<td><code>Dirt</code></td>
+<td><img alt="dirt block" src="images/blocks/dirt.png" width="50px"></td>
+<td></td>
+</tr>
+<tr>
+<td><code>Grass</code></td>
+<td><img alt="grass block" src="images/blocks/grass.jpg" width="50px"></td>
+<td></td>
+</tr>
+<tr>
+<td><code>Lava</code></td>
+<td><img alt="lava block" src="images/blocks/lava.png" width="50px"></td>
+<td></td>
+</tr>
+<tr>
+<td><code>Lavarock</code></td>
+<td><img alt="lavarock block" src="images/blocks/lavarock.jpg" width="50px"></td>
+<td></td>
+</tr>
+<tr>
+<td><code>Water</code></td>
+<td><img alt="water block" src="images/blocks/water.png" width="50px"></td>
+<td>Water can sometimes occour in form of a little lake. Don&#39;t run into this fields or you will encounter a damage at <code>-20hp</code> per second.</td>
+</tr>
+<tr>
+<td><code>EndOfMap</code></td>
+<td><img alt="end-of-map block" src="images/blocks/endofmap.jpg" width="50px"></td>
+<td></td>
+</tr>
+<tr>
+<td><code>Fog</code></td>
+<td><img alt="fog block" src="images/blocks/fog.png" width="50px"></td>
+<td></td>
+</tr>
+</tbody></table>
+<h1 id='examples'>Examples</h1><h2 id='the-cowardly-bot'>The cowardly bot</h2><pre class="highlight go tab-go"><code><span class="n">game</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">vikebot</span><span class="o">.</span><span class="n">MustJoin</span><span class="p">(</span><span class="s">"YOUR-AUTHTOKEN"</span><span class="p">)</span><span class="x">
+</span><span class="n">p</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="x">
+</span><span class="k">for</span><span class="x"> </span><span class="no">true</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="n">radar</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">p</span><span class="o">.</span><span class="n">Radar</span><span class="p">()</span><span class="x">
+    </span><span class="k">if</span><span class="x"> </span><span class="n">radar</span><span class="x"> </span><span class="o">&gt;</span><span class="x"> </span><span class="m">0</span><span class="x"> </span><span class="p">{</span><span class="x">
+        </span><span class="n">area</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">p</span><span class="o">.</span><span class="n">Watch</span><span class="p">()</span><span class="x">
+
+        </span><span class="n">potentiallyWest</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">helperCountPotentiallyWest</span><span class="p">(</span><span class="n">area</span><span class="p">)</span><span class="x">
+        </span><span class="n">potentiallyEast</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">helperCountPotentiallyEast</span><span class="p">(</span><span class="n">area</span><span class="p">)</span><span class="x">
+
+        </span><span class="k">if</span><span class="x"> </span><span class="n">potentiallyWest</span><span class="x"> </span><span class="o">&gt;</span><span class="x"> </span><span class="n">potentiallyEast</span><span class="x"> </span><span class="p">{</span><span class="x">
+            </span><span class="n">p</span><span class="o">.</span><span class="n">Move</span><span class="p">(</span><span class="n">vikebot</span><span class="o">.</span><span class="n">DirectionEast</span><span class="p">)</span><span class="x">
+        </span><span class="p">}</span><span class="x"> </span><span class="k">else</span><span class="x"> </span><span class="p">{</span><span class="x">
+            </span><span class="n">p</span><span class="o">.</span><span class="n">Move</span><span class="p">(</span><span class="n">vikebot</span><span class="o">.</span><span class="n">DirectionWest</span><span class="p">)</span><span class="x">
+        </span><span class="p">}</span><span class="x">
+    </span><span class="p">}</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre><pre class="highlight csharp tab-csharp"><code><span class="k">using</span> <span class="p">(</span><span class="n">Game</span> <span class="n">game</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Game</span><span class="p">(</span><span class="s">"YOUR-AUTHTOKEN"</span><span class="p">))</span>
+<span class="p">{</span>
+    <span class="n">Player</span> <span class="n">p</span> <span class="p">=</span> <span class="n">game</span><span class="p">.</span><span class="n">Player</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="k">true</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">radar</span> <span class="p">=</span> <span class="n">p</span><span class="p">.</span><span class="nf">Radar</span><span class="p">();</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">radar</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">MapEntity</span> <span class="n">area</span> <span class="p">=</span> <span class="n">p</span><span class="p">.</span><span class="nf">Watch</span><span class="p">();</span>
+
+            <span class="kt">int</span> <span class="n">potentiallyWest</span> <span class="p">=</span> <span class="nf">HelperCountPotentiallyWest</span><span class="p">(</span><span class="n">area</span><span class="p">);</span>
+            <span class="kt">int</span> <span class="n">potentiallyEast</span> <span class="p">=</span> <span class="nf">HelperCountPotentiallyEast</span><span class="p">(</span><span class="n">area</span><span class="p">);</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="n">potentiallyWest</span> <span class="p">&gt;</span> <span class="n">potentiallyEast</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="n">p</span><span class="p">.</span><span class="nf">Move</span><span class="p">(</span><span class="n">Direction</span><span class="p">.</span><span class="n">East</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="n">p</span><span class="p">.</span><span class="nf">Move</span><span class="p">(</span><span class="n">Direction</span><span class="p">.</span><span class="n">West</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<p>This bot doesn&#39;t have any &quot;real&quot; logic inside. The only thing he does is check whether potentially more players are on the east or west side of him and runs into the opposite direction. Just image the <code>Helper</code>-functions would return the amount of players.</p>
+
+<p>In a real game you of course need to check</p>
+
+<ul>
+<li>All cardinal-directions</li>
+<li>Do something &quot;intelligent&quot; to ether kill an opponent or flee.</li>
+</ul>
+
+<p>Also you probaply want to consider some other parameters into your logic like ...</p>
+
+<ul>
+<li>Health of your player</li>
+<li>Amount of enemies in your area (<code>Radar</code>)</li>
+</ul>
+<h1 id='abbreviations'>Abbreviations</h1><h2 id='user'>User</h2>
+<p>User specifies the real human person.</p>
+<h2 id='player'>Player</h2>
+<p>A player is a instance representing a user inside a game round. A player may be able to controll multiple characters.</p>
+<h2 id='character'>Character</h2>
+<p>A character is a single controllable entity placed inside the map. Each one has it&#39;s own location, health, etc.</p>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="go">GO</a>
+                <a href="#" data-language-name="csharp">C#</a>
+                <a href="#" data-language-name="java">Java</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
