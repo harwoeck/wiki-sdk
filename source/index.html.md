@@ -99,12 +99,27 @@ If you die, the gameserver will respawn you with the default health points rando
 
 A player is able to watch in `4` directions: `directionNorth` , `directionEast` , `directionSouth` and `directionWest`where north is at the top of the map.
 
+## Ratelimitation
+
+These ratelimits are describing how often an command can be called `per second` from a client. Therefore a `1` means the client is able to call this operation each second `once`. A `2` means the client can use the operation `twice` a second.
+
+| Operation | Ratelimit |
+| --------- | --------- |
+| Move   | 1|
+|Rotate | 2|
+|Radar | 1|
+|Scout | 2|
+|Environment | 5
+|Watch | 5|
+|Attack | 10|
+|Defend and Undefend | 5|
+
 # Instruct your Bot
 
 ## Rotate
 
 ```go
-game.Player.Rotate(vikebot.angleRight)
+game.Player.Rotate(vikebot.AngleRight)
 // Your bot successfully rotated into the right direction (dirEast if default value is dirNorth)
 ```
 
