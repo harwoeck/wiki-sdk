@@ -419,8 +419,14 @@
 <p>The mentioned website uses our open websocket protocol to receive special preprossed data that can be easily rendered. All people who want to do their own graphical rendering can also use this protocol and informations provided in the reference implementation.</p>
 <h1 id='about-your-bot'>About your Bot</h1>
 <p><img src="images/soldier.png" alt="bot" /></p>
-<h2 id='health'>Health</h2>
+<h2 id='health'>Health</h2><pre class="highlight go tab-go"><code><span class="n">health</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">game</span><span class="o">.</span><span class="n">Player</span><span class="o">.</span><span class="n">GetHealth</span><span class="p">()</span><span class="x">
+</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+    </span><span class="c">// Something "bad" happend</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre>
 <p>Each player start&#39;s with a default of <code>100</code> health-points (<code>HP</code>). Every time someone hits you the damage will be subtracted of your current <code>HP</code>. The moment you reach a value below <code>1 HP</code> you die and your deaths counter will be increased once. After death you will respawn.</p>
+
+<p>You can ask for your health with <code>GetHealth()</code> the returned value is an integer value including your health <code>(max 100)</code>.</p>
 <h2 id='location'>Location</h2>
 <p>At the start of the game each character will get randomly placed in the map. The map itself has a fixed per game size that doesn&#39;t change. There is no way to tell the absolute position of your player. You can&#39;t run out of this borders.</p>
 
@@ -439,6 +445,11 @@
 <th>Time (ms)</th>
 </tr>
 </thead><tbody>
+<tr>
+<td>Health</td>
+<td>2</td>
+<td>500</td>
+</tr>
 <tr>
 <td>Rotate</td>
 <td>2</td>
