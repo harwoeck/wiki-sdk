@@ -83,7 +83,17 @@ The mentioned website uses our open websocket protocol to receive special prepro
 
 ## Health
 
+```go
+health, err := game.Player.GetHealth()
+if err != nil {
+    // Something "bad" happend
+}
+```
+
 Each player start's with a default of `100` health-points (`HP`). Every time someone hits you the damage will be subtracted of your current `HP`. The moment you reach a value below `1 HP` you die and your deaths counter will be increased once. After death you will respawn.
+
+You can ask for your health with `GetHealth()` the returned value is an integer value including your health `(max 100)`.
+
 
 ## Location
 
@@ -105,6 +115,7 @@ These ratelimits are describing how often an command can be called `per second` 
 
 | Operation | Ratelimit | Time (ms) |
 | --------- | --------- | ----- |
+| Health | 2 | 500 |
 |Rotate | 2| 500 |
 | Move   | 1| 1000 |
 |Attack | 3| 300 |
